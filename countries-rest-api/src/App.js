@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
+import SearchForm from "./components/Search";
 import moonIcon from "./icons/moon-solid.svg";
 function App() {
   const [countries, setCountries] = useState([]);
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <div className="bg-DarkModeBackground font-sans ">
-      <div class="bg-DarkBlue flex justify-between font-semibold text-White py-6 md:px-[5%]">
+      <div className="bg-DarkBlue flex justify-between font-semibold text-White py-6 md:px-[5%] px-[5%]">
         {/* Header section  */}
         <h4 className="font-bold text-lg">Where in the world ?</h4>
         <div class="flex gap-4 ">
@@ -24,7 +25,12 @@ function App() {
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-4 md:gap-10 flex flex-col px-[10%] md:px-[5%]">
+      {/* Search and Filter Section  */}
+      <div className="flex mx-[5%] mt-10">
+        <SearchForm/>
+      </div>
+
+      <div className="md:grid md:grid-cols-4 md:gap-10 flex flex-col px-[1%] md:px-[5%]">
         {countries.map(country => (
           <Card key={country.id} country_data={country}/>
         ))}
