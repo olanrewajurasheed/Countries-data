@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
+import FilterRegion from "./components/Filter";
 import SearchForm from "./components/Search";
 import moonIcon from "./icons/moon-solid.svg";
 function App() {
@@ -26,8 +27,9 @@ function App() {
       </div>
 
       {/* Search and Filter Section  */}
-      <div className="flex mx-[5%] mt-10">
+      <div className="flex flex-col md:flex-row mx-[5%] mt-10 justify-between gap-10">
         <SearchForm/>
+        <FilterRegion />
       </div>
 
       <div className="md:grid md:grid-cols-4 md:gap-10 flex flex-col px-[1%] md:px-[5%]">
