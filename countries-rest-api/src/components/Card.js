@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ country_data }) => {
   return (
     <div className="bg-DarkBlue max-w-sm rounded-lg container mx-auto mt-20">
-      <img src={country_data.flags.svg} className="rounded-tr-lg rounded-tl-lg h-[200px] md:h-[150px]  w-full" />
+      <img src={country_data.flags.svg} className="object-cover rounded-tr-lg rounded-tl-lg h-[200px] md:h-[150px]  w-[100%]" />
 
       <div className="mx-6 pb-10 mt-6">
         <h3 className="font-bold text-White pb-2">{country_data.name}</h3>
